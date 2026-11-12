@@ -1,0 +1,27 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.709
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Band,Microsoft YaHei,20,&H000D0D0D,&H000D0D0D,&H000D0D0D,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: Sub,Microsoft YaHei,64,&H00F1F5F2,&H00F1F5F2,&H000D0D0D,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,1,0,0,0,1
+Style: Note,Microsoft YaHei,36,&H00A8B09F,&H00A8B09F,&H000D0D0D,&H00000000,0,0,0,0,100,100,0,0,1,0,0,3,0,0,0,1
+Style: Big,Microsoft YaHei,120,&H00A7E6B0,&H00A7E6B0,&H000D0D0D,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: BigCap,Microsoft YaHei,34,&H00A7E6B0,&H00A7E6B0,&H000D0D0D,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:17.34,Band,,0,0,0,,{\an7\pos(0,896)\p1\bord0\shad0}m 0 0 l 1920 0 l 1920 184 l 0 184
+Dialogue: 1,0:00:00.30,0:00:04.30,Sub,,0,0,0,,{\pos(300,1006)\fad(200,200)}先说需求，它给四个选项
+Dialogue: 1,0:00:00.30,0:00:04.30,Note,,0,0,0,,{\pos(1880,1000)\fad(200,200)}不是直接开做
+Dialogue: 1,0:00:04.60,0:00:08.40,Sub,,0,0,0,,{\pos(300,1006)\fad(200,200)}它反过来问：有清单吗，还是你口述
+Dialogue: 1,0:00:04.60,0:00:08.40,Note,,0,0,0,,{\pos(1880,1000)\fad(200,200)}问清楚才开始写
+Dialogue: 1,0:00:08.70,0:00:12.20,Sub,,0,0,0,,{\pos(300,1006)\fad(200,200)}边聊边做，方案同步冻结
+Dialogue: 1,0:00:08.70,0:00:12.20,Note,,0,0,0,,{\pos(1880,1000)\fad(200,200)}制作中 80%，随时可暂停
+Dialogue: 1,0:00:12.50,0:00:17.34,Sub,,0,0,0,,{\pos(300,1006)\fad(200,200)}5 张照片，2 处没覆盖，1 张要重拍
+Dialogue: 1,0:00:12.50,0:00:17.34,Note,,0,0,0,,{\pos(1880,1000)\fad(200,200)}它自己声明：这轮没真读图

@@ -1,0 +1,4 @@
+﻿# 忽略临时文件
+_patch.ps1
+_old-*.txt
+*.bak

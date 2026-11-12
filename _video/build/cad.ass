@@ -1,0 +1,29 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.709
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Band,Microsoft YaHei,20,&H0022240E,&H0022240E,&H0022240E,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: Sub,Microsoft YaHei,64,&H00F1F5F2,&H00F1F5F2,&H0022240E,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,1,0,0,0,1
+Style: Note,Microsoft YaHei,36,&H00A8B09F,&H00A8B09F,&H0022240E,&H00000000,0,0,0,0,100,100,0,0,1,0,0,3,0,0,0,1
+Style: Big,Microsoft YaHei,128,&H0057A8FF,&H0057A8FF,&H0022240E,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: BigCap,Microsoft YaHei,34,&H0057A8FF,&H0057A8FF,&H0022240E,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:16.30,Band,,0,0,0,,{\an7\pos(0,896)\p1\bord0\shad0}m 0 0 l 1920 0 l 1920 184 l 0 184
+Dialogue: 1,0:00:00.20,0:00:03.20,Sub,,0,0,0,,{\pos(300,1006)\fad(200,200)}三个 dwg，一次提交
+Dialogue: 1,0:00:00.20,0:00:03.20,Note,,0,0,0,,{\pos(1880,1000)\fad(200,200)}原始文件只读，不改客户图纸
+Dialogue: 1,0:00:03.40,0:00:07.20,Sub,,0,0,0,,{\pos(300,1006)\fad(200,200)}AI 逐个解析：认墙、认标注
+Dialogue: 1,0:00:03.40,0:00:07.20,Note,,0,0,0,,{\pos(1880,1000)\fad(200,200)}不是一把梭
+Dialogue: 1,0:00:07.40,0:00:10.20,Sub,,0,0,0,,{\pos(300,1006)\fad(200,200)}拆成 18 张图，一张张列出来
+Dialogue: 1,0:00:07.40,0:00:10.20,Note,,0,0,0,,{\pos(1880,1000)\fad(200,200)}选中配筋图，再选规则库
+Dialogue: 1,0:00:10.50,0:00:13.10,Sub,,0,0,0,,{\pos(300,1006)\fad(200,200)}7 条规则跑完，一条条给依据
+Dialogue: 1,0:00:10.50,0:00:13.10,Note,,0,0,0,,{\pos(1880,1000)\fad(200,200)}实际配筋 vs 要求配筋
+Dialogue: 1,0:00:13.40,0:00:16.30,Sub,,0,0,0,,{\pos(300,1006)\fad(200,200)}0 通过 · 0 不通过 —— 全部待复核
+Dialogue: 1,0:00:13.40,0:00:16.30,Note,,0,0,0,,{\pos(1880,1000)\fad(200,200)}AI 只提案，签字在人工

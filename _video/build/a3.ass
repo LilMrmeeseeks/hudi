@@ -1,0 +1,23 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.709
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Band,Microsoft YaHei,20,&H00F4F7F6,&H00F4F7F6,&H00F4F7F6,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: Sub,Microsoft YaHei,64,&H00141610,&H00141610,&H00F4F7F6,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,1,0,0,0,1
+Style: Note,Microsoft YaHei,36,&H00595F5A,&H00595F5A,&H00F4F7F6,&H00000000,0,0,0,0,100,100,0,0,1,0,0,3,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:10.50,Band,,0,0,0,,{\an7\pos(0,896)\p1\bord0\shad0}m 0 0 l 1920 0 l 1920 184 l 0 184
+Dialogue: 1,0:00:00.30,0:00:04.20,Sub,,0,0,0,,{\pos(300,1006)\fad(200,200)}问：黄浦江近期有哪些航行通告
+Dialogue: 1,0:00:00.30,0:00:04.20,Note,,0,0,0,,{\pos(1880,1000)\fad(200,200)}它先去查，再列表
+Dialogue: 1,0:00:04.40,0:00:07.30,Sub,,0,0,0,,{\pos(300,1006)\fad(200,200)}20 条，逐条文号、发布机构、有效期
+Dialogue: 1,0:00:04.40,0:00:07.30,Note,,0,0,0,,{\pos(1880,1000)\fad(200,200)}来源：上海海事局
+Dialogue: 1,0:00:07.60,0:00:10.50,Sub,,0,0,0,,{\pos(300,1006)\fad(200,200)}先分四类，再给结论
+Dialogue: 1,0:00:07.60,0:00:10.50,Note,,0,0,0,,{\pos(1880,1000)\fad(200,200)}每一条仍要人工确认
