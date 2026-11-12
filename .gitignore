@@ -2,3 +2,9 @@
 _patch.ps1
 _old-*.txt
 *.bak
+
+# 构建产物（不上线）
+_video/
+_assets/
+_proof/
+_ref/
