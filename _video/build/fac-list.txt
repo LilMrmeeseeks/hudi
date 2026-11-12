@@ -1,4 +1,0 @@
-file 'E:/个人/个人学习-AI产品经理/10-个人网站/_video/build/fac-s1.mp4'
-file 'E:/个人/个人学习-AI产品经理/10-个人网站/_video/build/fac-s2.mp4'
-file 'E:/个人/个人学习-AI产品经理/10-个人网站/_video/build/fac-s3.mp4'
-file 'E:/个人/个人学习-AI产品经理/10-个人网站/_video/build/fac-s4.mp4'
