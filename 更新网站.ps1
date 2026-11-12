@@ -33,7 +33,8 @@ git push
 if ($LASTEXITCODE -ne 0) {
     Write-Host ''
     Write-Host '推送失败。常见原因：没连代理（GitHub 直连不通）、或没登录。' -ForegroundColor Red
-    Write-Host '代理检查：git config --global http.proxy' -ForegroundColor DarkGray
+    Write-Host '如果开着代理软件：git config --global http.proxy http://127.0.0.1:端口' -ForegroundColor DarkGray
+    Write-Host '如果没开代理：git config --global --unset http.proxy' -ForegroundColor DarkGray
     Read-Host '按回车退出'
     exit 1
 }
