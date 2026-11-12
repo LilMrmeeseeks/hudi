@@ -26,14 +26,23 @@ if ([string]::IsNullOrWhiteSpace($msg)) {
 
 git add -A
 git commit -m $msg
+
 Write-Host ''
 Write-Host '正在推送到 GitHub…' -ForegroundColor Cyan
 git push
+if ($LASTEXITCODE -ne 0) {
+    Write-Host ''
+    Write-Host '推送失败。常见原因：没连代理（GitHub 直连不通）、或没登录。' -ForegroundColor Red
+    Write-Host '代理检查：git config --global http.proxy' -ForegroundColor DarkGray
+    Read-Host '按回车退出'
+    exit 1
+}
 
 $stamp = Get-Date -Format 'yyyyMMddHHmm'
 Write-Host ''
 Write-Host '已推送。1–2 分钟后线上生效。' -ForegroundColor Green
 Write-Host '手机或微信里看到的还是旧版，就打开下面这个带时间戳的地址强制刷新：' -ForegroundColor DarkGray
-Write-Host "  https://你的用户名.github.io/portfolio/?v=$stamp"
+Write-Host "  https://lilmrmeeseeks.github.io/hudi/?v=$stamp" -ForegroundColor White
 Write-Host ''
+Write-Host '（时间戳只是骗过缓存，换成任何不相干的数字都行）' -ForegroundColor DarkGray
 Read-Host '按回车退出'

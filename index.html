@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>胡迪 · AI 产品经理｜企业 Agent 与端侧 AI</title>
-<meta name="description" content="胡迪，AI 产品经理。三个阶段：海图 RAG + Agent 编排、人防 CAD 多模态解析、门店 CV + 对话；一条平台线跑通智能体工厂。" />
+<meta name="description" content="胡迪，AI 产品经理。三个阶段：海图 RAG + Agent 编排、人防 CAD 多模态解析、咖啡门店 SOP 检测；一条平台线跑通智能体工厂。" />
 <meta property="og:type" content="profile" />
 <meta property="og:title" content="胡迪 · AI 产品经理" />
-<meta property="og:description" content="三个垂类场景已上线或终验，一条平台线跑通 MVP。每一屏都放真实操作界面。" />
+<meta property="og:description" content="三个垂类场景，两个跑到验收、一个覆盖 2000+ 门店；一条平台线跑通 MVP。每一屏都放真实操作界面。" />
 <meta property="og:image" content="https://lilmrmeeseeks.github.io/hudi/share.jpg" />
 <meta property="og:url" content="https://lilmrmeeseeks.github.io/hudi/" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -159,6 +159,7 @@ h1 em{font-style:normal; font-family:var(--mono); font-size:var(--t1); letter-sp
 .gate-note{position:absolute; bottom:calc(100% + 8px); left:50%; transform:translateX(-50%);
   white-space:nowrap; font-family:var(--mono); font-size:var(--t1); color:#9B4A22; letter-spacing:.02em;
   background:var(--paper); padding:1px 5px}
+.fig-cap{margin:18px 0 0; font-size:var(--t1); color:var(--ink-soft); line-height:1.8; max-width:64ch}
 /* 流水线动效：连线亮段 + 块内数据灌入 */
 /* 节点推进由 JS 驱动：见 flowsRun() */
 .flow .arrow .wire{position:absolute; top:calc(50% - 2px); left:-10px; width:14px; height:4px; background:#C0632F; opacity:0; pointer-events:none; border-radius:1px; transition:left .42s cubic-bezier(.4,.1,.5,.9), opacity .2s ease}
@@ -555,7 +556,7 @@ h1 em{font-style:normal; font-family:var(--mono); font-size:var(--t1); letter-sp
     <li><a href="#cap"><span class="n">01</span>能力</a></li>
     <li><a href="#chart"><span class="n">02</span>RAG + Agent 编排</a></li>
     <li><a href="#cad"><span class="n">03</span>多模态解析</a></li>
-    <li><a href="#cv"><span class="n">04</span>CV + 对话</a></li>
+    <li><a href="#cv"><span class="n">04</span>CV / 多模态协同</a></li>
     <li><a href="#factory"><span class="n">05</span>平台与评测</a></li>
     <li><a href="#method"><span class="n">06</span>方法</a></li>
     <li><a href="#about"><span class="n">07</span>履历</a></li>
@@ -577,7 +578,7 @@ h1 em{font-style:normal; font-family:var(--mono); font-size:var(--t1); letter-sp
         <h1>胡迪 <em>HU DI</em></h1>
         <p class="role">AI 产品经理 <i>·</i> 企业 Agent 与端侧 AI</p>
         <p class="seek">在找 <b>AI 产品经理</b> · 企业 Agent / 端侧 AI · 深圳</p>
-        <p class="thesis">三个垂类场景已上线或终验，一条平台线跑通 MVP。<b>下面是它们的真实操作界面，不是演示稿。</b></p>
+        <p class="thesis">三个垂类场景，两个跑到验收、一个覆盖 2000+ 门店；一条平台线跑通 MVP。<b>下面是它们的真实操作界面，不是演示稿。</b></p>
       </div>
 
       <div class="deck" id="deck">
@@ -593,10 +594,10 @@ h1 em{font-style:normal; font-family:var(--mono); font-size:var(--t1); letter-sp
             <figcaption>人防 CAD 智能审图 · 80 张图纸终验</figcaption>
           </div>
         </a>
-        <a class="card c3" data-i="2" href="#cv" data-cap="摄像头不再只会报警。四路画面同时看，问一句答一句，追问也能答。">
+        <a class="card c3" data-i="2" href="#cv" data-cap="摄像头不再只会报警。8 类 SOP 项端侧检测，没装专项的问题让模型现场看。">
           <div class="card-in">
-            <img src="card-cv.jpg" alt="端侧感知与多模态：左侧智能助手对话与思考链，右侧 Space1 实时监控与目标框">
-            <figcaption>端侧感知 + 多模态 · 2000+ 门店</figcaption>
+            <img src="card-cv.jpg" alt="端侧感知与多模态：左侧智能助手对话与思考链，右侧实时监控与目标框">
+            <figcaption>CV / 多模态协同 · 2000+ 门店</figcaption>
           </div>
         </a>
         <a class="card c4" data-i="3" href="#factory" data-cap="把「造智能体」这件事本身产品化。220 例评测，96.8%。">
@@ -878,71 +879,83 @@ h1 em{font-style:normal; font-family:var(--mono); font-size:var(--t1); letter-sp
   </div>
 </section>
 
-<!-- ========== 04 端侧感知 + 多模态 · AI 店长 ========== -->
+<!-- ========== 04 端侧感知 + 多模态 · 咖啡门店 SOP ========== -->
 <section class="screen" id="cv">
   <div class="wrap">
-    <div class="kicker"><span class="k">04 / CV + 对话 · 端侧</span><span>2025.01–2025.08 · 已上线 · WAIC 2025</span></div>
-    <h2>摄像头不再只会报警，<em>它能回答问题</em></h2>
-    <p class="sub">CV 时代客户买的是算法；多模态时代客户买的是「少一个人」。这是同一个场景、两套完全不同的产品定义。</p>
-    <p class="tail">难的不是识别，是让每一步都指得回画面——框是哪来的、阈值谁定的、这一次为什么判正常。所以它把思考过程写在答案左边，而不是只给一句结论。</p>
+    <div class="kicker"><span class="k">04 / 门店 SOP 检测 · 端侧 + 云端</span><span>2025.01–2025.08 · 2000+ 门店在跑 · WAIC 2025</span></div>
+    <h2>摄像头不再只会报警，<em>它开始回答「为什么」</em></h2>
+    <p class="sub">某连锁咖啡品牌的门店员工操作规范检测。端侧 YOLO 管 8 类 SOP 项——客区清洁、柜面清洁，备料 / 饮料 / 货物 / 物料 / 耗材的数量，以及包装有效期；大模型在后端干两件事：把一堆事件汇总成「今天先看哪几件」，以及回答那些没有专项算法的问题。</p>
+    <p class="tail">装了的靠检测拿结论，没装的靠模型现场看。视频留在店里，出店的是告警事件和按需抽的那一帧。</p>
 
-    <p class="demo-note"><b>注</b> 下面四段是在自建的演示环境里录的，界面与数据为演示所造；产品本身是这套链路，不是这个页面。</p>
+    <p class="demo-note"><b>注</b> 下面四段是在自建的演示环境里录的，界面与数据为演示所造；产品本身是这套链路，不是这个页面。真实门店有部署，但演示不用真实录像——一是脱敏，二是可控。</p>
     <div class="clips fan">
       <figure class="clip">
-        <button class="clip-btn" type="button" data-src="cv1.mp4" data-t="全场景感知" aria-label="播放：一个院子四路画面，问一句它就去查"><img src="cv1.jpg" alt="ARGUS：多路画面 + 对话式追问" width="960" height="538" loading="lazy"><span class="clip-tag">01 全场景</span><span class="play" aria-hidden="true"></span></button>
+        <button class="clip-btn" type="button" data-src="cv1.mp4" data-t="多路画面 + 追问" aria-label="播放：四路画面同看，问一句它就去查"><img src="cv1.jpg" alt="多路画面 + 对话式追问，回答带出处" width="960" height="538" loading="lazy"><span class="clip-tag">01 多路 + 追问</span><span class="play" aria-hidden="true"></span></button>
       </figure>
       <figure class="clip">
-        <button class="clip-btn" type="button" data-src="cv2.mp4" data-t="框选细读" aria-label="播放：框住一块画面，它切出来再认"><img src="cv2.jpg" alt="ARGUS：框选区域后裁切识别" width="960" height="538" loading="lazy"><span class="clip-tag">02 框选</span><span class="play" aria-hidden="true"></span></button>
+        <button class="clip-btn" type="button" data-src="cv2.mp4" data-t="划定区域" aria-label="播放：框一块区域，把它变成可复核的 ROI"><img src="cv2.jpg" alt="划定 ROI（桌位 A、靠窗那排），区域规则挂上去" width="960" height="538" loading="lazy"><span class="clip-tag">02 划定区域</span><span class="play" aria-hidden="true"></span></button>
       </figure>
       <figure class="clip">
-        <button class="clip-btn" type="button" data-src="cv3.mp4" data-t="一句话布控" aria-label="播放：一句话画出一个禁入区并挂上告警"><img src="cv3.jpg" alt="ARGUS：用一句话部署区域规则" width="960" height="538" loading="lazy"><span class="clip-tag">03 布控</span><span class="play" aria-hidden="true"></span></button>
+        <button class="clip-btn" type="button" data-src="cv3.mp4" data-t="一句话布控" aria-label="播放：一句话生成检测项与告警规则"><img src="cv3.jpg" alt="用一句话配一个检测项：条件、阈值、告警对象" width="960" height="538" loading="lazy"><span class="clip-tag">03 一句话布控</span><span class="play" aria-hidden="true"></span></button>
       </figure>
       <figure class="clip">
-        <button class="clip-btn" type="button" data-src="cv4.mp4" data-t="跨时日报" aria-label="播放：跨一整天回答今天正不正常"><img src="cv4.jpg" alt="ARGUS：按天聚合的饮食与如厕报告" width="960" height="538" loading="lazy"><span class="clip-tag">04 日报</span><span class="play" aria-hidden="true"></span></button>
+        <button class="clip-btn" type="button" data-src="cv4.mp4" data-t="跨天汇总" aria-label="播放：把一天的事件汇成一张清单"><img src="cv4.jpg" alt="按天汇总：哪几项不达标、可能的原因、先看哪个" width="960" height="538" loading="lazy"><span class="clip-tag">04 跨天汇总</span><span class="play" aria-hidden="true"></span></button>
       </figure>
     </div>
 
     <div class="fig">
       <div class="flow">
-        <div class="node w-live"><div class="t">门店画面</div><div class="d">端侧</div></div>
+        <div class="node w-live"><div class="t">门店画面</div><div class="d">多路 · 固定机位</div></div>
         <span class="arrow"></span>
-        <div class="node w-live"><div class="t">YOLO 事件落库</div><div class="d">只留结构化</div></div>
-        <div class="gate"><span class="gate-note">不留画面</span></div>
-        <div class="node w-live"><div class="t">云端多模态应答</div><div class="d">可对话</div></div>
+        <div class="node w-live"><div class="t">AI BOX · YOLO</div><div class="d">8 类 SOP 项 · 带置信度</div></div>
         <span class="arrow"></span>
-        <div class="node w-live"><div class="t">店长手机上的结论</div><div class="d">要做什么</div></div>
+        <div class="node w-live"><div class="t">本地事件库</div><div class="d">告警 + 关键帧 + 前后 5s</div></div>
+        <div class="gate"><span class="gate-note">视频不出店</span></div>
+        <div class="node w-live"><div class="t">问询路由</div><div class="d">有专项查库 · 没专项抽帧</div></div>
+        <span class="arrow"></span>
+        <div class="node w-live"><div class="t">大模型</div><div class="d">汇总归因 · 补盲区</div></div>
       </div>
+      <p class="fig-cap">不是「摄像头 + 大模型直连」，是「检测 → 事件 → 路由 → 回答」四段。中间那道闸门决定了两件事：带宽（GB 级降到 KB 级）和数据边界（客户收结构化事件，画面不出店）。</p>
     </div>
 
     <div class="nums">
-      <div class="nb"><div class="v">1 个月</div><div class="c">MVP 到可演示</div></div>
-      <div class="nb"><div class="v">2000<small style="font-size:14px">+</small></div><div class="c">门店累计落地</div></div>
-      <div class="nb"><div class="v">2025.07</div><div class="c">WAIC 亮相</div></div>
-      <div class="nb"><div class="v">约 2,000 元</div><div class="c">单店 · 洽谈中</div></div>
+      <div class="nb"><div class="v">2000<small style="font-size:20px">+</small></div><div class="c">门店在跑 · 从 50 家测试起步</div></div>
+      <div class="nb"><div class="v">8 类</div><div class="c">SOP 检测项 · 分三个难度组</div></div>
+      <div class="nb"><div class="v">2 工时</div><div class="c">每店部署 · 99 工时 / 50 家一批</div></div>
+      <div class="nb"><div class="v">约 2,000 元</div><div class="c">单店 · 洽谈口径</div></div>
     </div>
 
     <div class="judges">
-      <div class="judge"><div class="n">判断 01</div><h3>界面形状跟着模型走</h3><p>CV 是「选算法」，多模态是「用话问」。沿用原来的参数面板，等于把新能力塞进旧壳子。</p></div>
-      <div class="judge"><div class="n">判断 02</div><h3>端侧只留结构化事件，不留画面</h3><p>一个决定同时解决两件事：隐私说不清的地方不放原始视频，带宽也从 GB 级降到 KB 级。</p></div>
-      <div class="judge"><div class="n">判断 03</div><h3>先做单店单位经济，再谈复制</h3><p>单店算不过来，铺得越多亏得越快。定价和渠道是从这一张表倒推出来的。</p></div>
+      <div class="judge"><div class="n">判断 01</div><h3>把「脏不脏」翻译成「有几个没收拾的杯子」</h3><p>「柜台脏」没法标、没法检、没法验收；「台面上有 3 个未收走的杯子」可以。不是模型变强了，是问题被重新定义了——这一步是整套东西能落地的关键。</p></div>
+      <div class="judge"><div class="n">判断 02</div><h3>视频留在店里，出店的是告警事件</h3><p>这条是我和客户一起定的，不是技术单方面拍的。驱动因素是带宽：多路 1080p 连续上传，门店宽带和云存储账单都扛不住。隐私是顺带的收益——录像里都是顾客和员工的脸。</p></div>
+      <div class="judge"><div class="n">判断 03</div><h3>算法是一次开发的，铺得越多单店越薄</h3><p>一批 50 家从备货到算法上线总共 99 工时，折合每店 2 工时——这是它能铺到 2000 家的原因。真正的风险不在「铺不动」，在「换一个客户就套不上」——新店型要人工重标。</p></div>
     </div>
 
     <div class="notes">
       <span><b>不认人</b>只判行为与物体，不做人脸与身份识别</span>
-      <span><b>不定性</b>异常只报「疑似 + 依据」，处置权留给人</span>
+      <span><b>不定性</b>异常只报「疑似 + 依据」，处置权留给督导和店长</span>
       <span><b>不藏阈值</b>阈值写在界面上，客户自己能改</span>
     </div>
     <div class="notes">
-      <span><b>未做</b>跨镜 reID 追踪</span>
-      <span><b>未做</b>端侧本地跑（当前依赖云端多模态）</span>
-      <span><b>未做</b>多人之间的交互关系推理</span>
+      <span><b>不接</b>POS / 交易数据（品牌内部数据，不外接）</span>
+      <span><b>不做</b>营收分析 · 跨镜 reID · 端到端 VLM 当主机位</span>
+      <span><b>不做</b>自动处罚（系统只出清单和建议）</span>
     </div>
 
-    <details class="fx"><summary><span class="sum">开放词表目标计数是怎么做的</span></summary>
-      <div class="fx-in">不预设类别。用检测框 + 语言描述做开放词表匹配，再按时间窗口做去重与合并，避免同一件商品被数成三件。历史事件检索走的是结构化字段 + 时间窗，不是全文搜索。</div>
+    <details class="fx"><summary><span class="sum">8 类检测项，难度差在哪</span></summary>
+      <div class="fx-in">分三组。<b>计数类 5 项</b>（备料、饮料、货物、物料、耗材）：单帧数框不准，要靠时间窗去重合并成「这段时间某货架维持 7 件」才算一次事件。<b>读文字 1 项</b>（包装有效期）：检测框先定位日期区，再 OCR 出字符，再用日期规则校验——月份 1–12、日不超过当月、和包装格式比对。<b>状态判断 2 项</b>（客区清洁、柜面清洁）：最难，得翻译成可数的违规物，而且单独走「疑似」档不进正式告警，因为它天生误报。</div>
+    </details>
+
+    <details class="fx"><summary><span class="sum">有效期为什么用 OCR，不用大模型</span></summary>
+      <div class="fx-in">因为要<b>可复算</b>。同一张图过两遍，OCR 加规则给出的结果一致，出了争议能查、能复现；大模型可能今天读 04.29、明天读 04.20。凡是会被追责的字段，都优先选可复算的方案，而不是让模型「再看一遍」。所以这一项只输出「疑似临期」，不自动下架。</div>
+    </details>
+
+    <details class="fx"><summary><span class="sum">后台模型为什么是 Qwen2.5-VL，现在会怎么选</span></summary>
+      <div class="fx-in">当时（2025 年 1 月）第一约束是<b>数据不出店</b>——画面里有顾客和员工的脸，视频既然留店里，帧也不该发出去，这一条先砍掉所有公有云 API。剩下三个理由：中文场景（包装说明、门店标识）、这一版把 OCR 和信息抽取拉了一大截、开源 3B/7B/72B 三档能按盒子显存挑。<br><br>它的边界很清楚：<b>能做</b>抽一帧看画面元素、读标识文字、按 JSON 输出；<b>做不了</b>连续看 24 小时视频、精确计数（同一张图问两次两个数）、可复算、跨机位追踪。所以它只负责「补盲区」和「汇总」，统计和判定都在检测层与规则层。<br><br>现在重做会看 Qwen3-VL：空间感知能理解「桌位 A」这种指代，长视频事件定位更强。但<b>换版本改的是工具，不改分工</b>——「模型给不出稳定复算的答案」是概率模型的本质，不是版本问题。</div>
     </details>
   </div>
 </section>
+
 <section class="screen" id="factory">
   <div class="wrap">
     <div class="kicker"><span class="k">05 / 平台与评测 · 工厂</span><span>2026 H2 · MVP 可用</span></div>
